@@ -1,6 +1,29 @@
-## Engenharia de Software - 2024.1 | E-Book Wizard
-## E-Book Wizard 
+# Engenharia de Software-2024.1 | Universidade Federal do Tocantins - Palmas
 
+---
+## Ebook Wizard
+
+---
+#### Curso: Bacharelado em Ciência da Computação
+#### Professor: Edeilson Milhomem da Silva
+#### Monitor: João Gabriel Alves de Souza
+#### Time: Caio Goncalvez Nascimento, João Victor Melo do Nascimento, Almir Daniel Melo Coelho, Vinicius Gabriel da Silva Santos, Vinícius Wanderley Arruda
+---
+## Introdução 
+O projeto E-Book Wizard é uma plataforma de comércio eletrônico projetada para usuários que desejam comprar livros de forma conveniente e acessível. Com uma vasta seleção de títulos em diferentes gêneros e categorias, os usuários podem navegar, pesquisar e comprar livros facilmente.
+
+
+### Definindo os requisitos funcionais do projeto:
+
+---
+
+ - RF 01 - Cadastrar usuário. [Joao Victor](https://github.com/joaovictormelor) Revisado por @ad-melo
+ - RF 02 - Validar login do usuário. [Almir Daniel](https://github.com/ad-melo) Revisado por @joaovictormelor
+ - RF 03 - Cadastrar livro. [Vinicius Arruda](https://github.com/ViiniDev) Revisado por @viniciusS2S2
+ - RF 04 - Validar compra. [Caio Goncalves](https://github.com/graccios) Revisado por @ViiniDev
+ - RF 05 - Pesquisar livro. [Vinicius Gabriel](https://github.com/viniciuS2S2) Revisado por @graccius
+
+---
 ## RF01 - Cadastro de Usuários
 
 
@@ -180,7 +203,7 @@ FA01 - Redefinir senha:
 ### Autor: @graccius - Caio Gonçalves Nascimento
 
 ---
-#### Revisor: @ViiniDev - Vinicius 
+#### Revisor: @ViiniDev - Vinicius Wanderley Arruda
 
 |Item            | Descrição
 |-----------     |----------
