@@ -12,7 +12,7 @@
 |-----------     |----------
 |Caso de uso     | Cadastro de novo Usuário.
 |Resumo          | Processo de cadastro de um novo usuário no sistema
-|Ator prinicpal  | Usuário interasso em comprar um livro
+|Ator principal  | Usuário interessado em comprar um livro
 |Ator secundario | 
 |Pré condição    | O ator principal deve estar conectado à internet e com acesso à plataforma
 |Pós-condição    | o ator principal não deve ter um cadastro no sistema
@@ -109,3 +109,62 @@ FA01 - Redefinir senha:
 4- O sistema automaticamente envia um e-mail com um link de confirmação para redefinição de senha.
 5- O usuário clica no link de confirmação recebido por e-mail.
 6- O sistema redireciona o usuário para uma página onde ele pode redefinir a senha.
+
+## RF03 - Cadastro de Livros
+
+
+### Autor: @ViiniDev - Vinícius Wanderley Arruda
+
+---
+#### Revisor: @viniciuS2S2 - Vinicius Gabriel da Silva Santos
+
+|Item            | Descrição
+|-----------     |----------
+|Caso de uso     | Cadastro de novo Livro.
+|Resumo          | Processo de cadastro de um novo livro no sistema
+|Ator prinicpal  | Administrado interasso em vender um livro
+|Ator secundario | 
+|Pré condição    | O ator principal deve estar conectado à internet e com acesso à plataforma
+|Pós-condição    | O ator principal deve ter um cadastro no sistema como administrador
+
+### **Descrição suncita:**
+&nbsp;&nbsp;&nbsp;&nbsp; Permitir que os novos livros sejam cadastrados no sistema para que possam relaizar vendas.
+
+#### Fluxo principal:
+|Passos | Descrição
+|--------|------|
+|Passo 1 | O administrador acessa o sistema como login-admin
+|Passo 2 | Na tela inicial o administrador seleciona o botão intitulado "Cadastrar Livro". Ao clicar no botão o usário é direcionado para a tela de cadastro, onde poderá inserir os dados do livro, para prosseguir com o processo.
+|Passo 3 | É apresentado um formulário para ser preenchido com os dados do livro
+|Passo 4 | Ao terminar de preencher o formulário, clica no botão "Cadastrar"
+| Passo 5| O sistema faz a verificação dos dados inseridos pelo administrador. <br/> Se correto, o administrador é redirecionado para a página de listagem de livros cadastrados. <br/> Se incorreto, será retornado mensagens de erro no formulário.
+
+### **Campos do formulário:**
+
+|Campo             | Obrigatório? | Editável | Formato
+|------------------|--------------|----------|--------
+|Nome              | Sim          | Sim      | Texto|
+|Descrição         | Sim          | Sim      | Texto|
+|Preço_livro       | Sim          | Sim      | Numérico|
+|ISBN_livro        | Sim          | Sim      | Numérico|
+|Gênero_livro      | Sim          | Sim      | Texto|
+|Autor             | Sim          | Sim      | Texto|
+
+### Opções de administrador:
+|Opção    | Descrição                                                | Atalho |
+|---------|----------------------------------------------------------|---------
+|Confirmar| Valida os dados preenchidos e confirma a criação de cadastro de livro|
+|Cancelar | Cancelar criação de cadastro                                |
+
+
+#### Relatório de administrador
+
+| Campo                    | Descrição                                                             | Formato |
+| ------------------------ | --------------------------------------------------------------------- | ------- |
+| Cadastro criada com sucesso!| Informa o administrador que o registro foi realizado com sucesso       | Texto   |
+
+#### Fluxo alternativo:
+|Passos  | Descrição
+|--------|----------
+|Passo 1 | O livro já possui cadastro no sistema.
+|Passo 2 | O sistema retorna uma mensagem de livro já cadastrado no sistema
