@@ -2,6 +2,7 @@
 
 ## RF01 - Cadastro de Usuários
 
+
 ### Autor: @joaovictormelor - João Victor Melo do Nascimento
 
 ---
@@ -59,3 +60,52 @@
 |--------|----------
 |Passo 1 | O ator já possui cadastro no sistema.
 |Passo 2 | O ator clica no botão "Já  possuo uma conta" sendo redirecionado para a tela de Login
+
+## RF02 - Login
+
+### Autor: @ad-melo - Almir Daniel Melo Coelho
+
+---
+#### Revisor: @joaovictormelor - João Victor Melo do Nascimento
+
+#### Atores:
+Sistema - Permite que os usuários façam login usando seu login e senha.
+
+#### Descrição sucinta:
+Autenticação dos usuários e diferenciação do nível de acesso permitido a cada conta; 
+
+#### Pre-condição:
+Os usuários deverão ter uma conta no sistema;
+
+#### Fluxo Principal:
+
+1- O usuário ao acessar a tela inicial do sistema seleciona a opção "Login".
+2- O sistema apresenta a tela de LOGIN E SENHA solicitando os mesmos.
+3- O usuário insere o Login e a Senha nos campos correspondentes.
+4- O sistema autentica as credenciais do usuário.
+5- Após a autenticação do usuário este é direcionado para a tela principal do sistema.
+
+#### Campos do formulário
+
+| Campo | Obrigatório? | Editável? | Formato      |
+|-------|--------------|-----------|--------------|
+| Login | Sim          | Não       | texto        |
+| Senha | Sim          | Sim       | Alfanumérico |
+	
+#### Opções dos Usuários:
+
+| Opção                	         | Descrição                                                    | atalho
+|--------------------------------|--------------------------------------------------------------|----------
+| Confirmar		         | Confirma o Login e a Senha			                | Ctrl+s
+| Verificar os dados preenchidos | Cancela o Login e Senha					| Ctrl+z
+
+#### Fluxos Alternativos;
+
+FA01 - Redefinir senha:
+
+1- O usuário ao acessar a tela de login do sistema seleciona a opção "Redefinir senha".
+2- O sistema solicita o e-mail usado no cadastro.
+3- O usuário informa o e-mail e confirma a ação.
+4- O sistema automaticamente envia um e-mail com um link de confirmação para redefinição de senha.
+5- O usuário clica no link de confirmação recebido por e-mail.
+6- O sistema redireciona o usuário para uma página onde ele pode redefinir a senha.
