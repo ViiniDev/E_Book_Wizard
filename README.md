@@ -260,3 +260,44 @@ O valor da compra é deduzido do saldo do cliente ou cobrado do método de pagam
 |Passo 9 | Se o cliente decidir cancelar a compra, o sistema retorna à página do carrinho de compras e os itens selecionados são removidos.
 |Passo 11| Se ocorrer uma falha no processamento do pagamento, o sistema exibe uma mensagem de erro e solicita que o cliente tente novamente ou entre em contato com o suporte ao cliente.
 |Passo 12| Se houver uma falha ao gerar o comprovante de compra, o sistema exibe uma mensagem de erro e informa ao cliente que o comprovante será enviado por e-mail ou estará disponível em sua conta após a resolução do problema.
+
+## RF05 - Pesquisar Livros
+
+### Autor: @viniciuS2S2 - Vinicius Gabriel Da Silva Santos
+
+---
+#### Revisor: @graccius - Caio Gonçalves Nascimento
+
+|Item            | Descrição
+|-----------     |----------
+|Caso de uso     | Pesquisar Livros.
+|Resumo          | Os usuários devem poder pesquisar livros por título, autor, categoria, ou qualquer termo relacionado.
+|Ator prinicpal  | Usuário (autenticado ou não) interessado em comprar um livro em específico.
+|Ator secundario | 
+|Pré condição    | O ator principal deve estar conectado à internet e com acesso à plataforma
+|Pós-condição    | 
+
+### **Descrição suncita:**
+&nbsp;&nbsp;&nbsp;&nbsp; Permitir que os visitantes pesquisem livros na loja virtual.
+
+#### Fluxo principal:
+|Passos | Descrição
+|--------|------|
+|Passo 1 | O usuário acessa o sistema de compras de livros e visualiza a tela inicial
+|Passo 2 | Na tela inicial, o visitante insere o termo de pesquisa na barra de busca.
+|Passo 3 | O sistema sugere resultados conforme o visitante digita ou pressiona "Pesquisar".
+|Passo 4 | O visitante seleciona um dos resultados ou pressiona "Pesquisar" para ver todos os resultados.
+| Passo 5| O sistema exibe uma lista de livros correspondentes à pesquisa.
+
+
+### Opções de usuário:
+|Opção    | Descrição                                                | Atalho |
+|---------|----------------------------------------------------------|---------
+|Selecionar| O visitante pode selecionar um livro da lista de resultados|
+|Filtrar| O visitante pode refinar a pesquisa utilizando filtros adicionais, como categoria, autor, etc.|
+
+
+#### Fluxo alternativo:
+|Passos  | Descrição
+|--------|----------
+|Passo 1 | Se nenhum livro corresponder à pesquisa, o sistema exibe uma mensagem informando que nenhum resultado foi encontrado.
