@@ -1,4 +1,5 @@
-#Engenharia de Software - 2024.1 | E-Book Wizard
+## Engenharia de Software - 2024.1 | E-Book Wizard
+## E-Book Wizard 
 
 ## RF01 - Cadastro de Usuários
 
@@ -79,11 +80,13 @@ Os usuários deverão ter uma conta no sistema;
 
 #### Fluxo Principal:
 
-1- O usuário ao acessar a tela inicial do sistema seleciona a opção "Login".
-2- O sistema apresenta a tela de LOGIN E SENHA solicitando os mesmos.
-3- O usuário insere o Login e a Senha nos campos correspondentes.
-4- O sistema autentica as credenciais do usuário.
-5- Após a autenticação do usuário este é direcionado para a tela principal do sistema.
+|Passos | Descrição
+|--------|------|
+|Passo 1 | O usuário ao acessar a tela inicial do sistema seleciona a opção "Login".
+|Passo 2 | O sistema apresenta a tela de LOGIN E SENHA solicitando os mesmos.
+|Passo 3 | O usuário insere o Login e a Senha nos campos correspondentes.
+|Passo 4 | O sistema autentica as credenciais do usuário.
+|Passo 5 | Após a autenticação do usuário este é direcionado para a tela principal do sistema.
 
 #### Campos do formulário
 
@@ -103,12 +106,14 @@ Os usuários deverão ter uma conta no sistema;
 
 FA01 - Redefinir senha:
 
-1- O usuário ao acessar a tela de login do sistema seleciona a opção "Redefinir senha".
-2- O sistema solicita o e-mail usado no cadastro.
-3- O usuário informa o e-mail e confirma a ação.
-4- O sistema automaticamente envia um e-mail com um link de confirmação para redefinição de senha.
-5- O usuário clica no link de confirmação recebido por e-mail.
-6- O sistema redireciona o usuário para uma página onde ele pode redefinir a senha.
+|Passos | Descrição
+|--------|------|
+|Passo 1 | O usuário ao acessar a tela de login do sistema seleciona a opção "Redefinir senha".
+|Passo 2 | O sistema solicita o e-mail usado no cadastro.
+|Passo 3 | O usuário informa o e-mail e confirma a ação.
+|Passo 4 | O sistema automaticamente envia um e-mail com um link de confirmação para redefinição de senha.
+|Passo 5 | O usuário clica no link de confirmação recebido por e-mail.
+|Passo 6 | O sistema redireciona o usuário para uma página onde ele pode redefinir a senha.
 
 ## RF03 - Cadastro de Livros
 
@@ -168,3 +173,67 @@ FA01 - Redefinir senha:
 |--------|----------
 |Passo 1 | O livro já possui cadastro no sistema.
 |Passo 2 | O sistema retorna uma mensagem de livro já cadastrado no sistema
+
+## RF04 - Validar Compra de E-Book
+
+
+### Autor: @graccius - Caio Gonçalves Nascimento
+
+---
+#### Revisor: @ViiniDev - Vinicius 
+
+|Item            | Descrição
+|-----------     |----------
+|Caso de uso     | Validar Compra de E-book.
+|Resumo          | Processo de validação de compra
+|Ator principal  | Usuário interessado em comprar um livro
+|Ator secundario | 
+|Pré condição    |     O cliente deve estar autenticado no sistema.               
+    O cliente deve ter selecionado um ou mais e-books para compra.
+    O cliente deve ter inserido as informações de pagamento corretas.
+|Pós-condição    | O e-book é disponibilizado para download ou acesso online ao cliente. 
+O cliente recebe um comprovante de compra. 
+O valor da compra é deduzido do saldo do cliente ou cobrado do método de pagamento fornecido.
+
+### **Descrição suncita:**
+&nbsp;&nbsp;&nbsp;&nbsp; Este caso de uso descreve o processo pelo qual um cliente valida a compra de um e-book no sistema de venda de e-books.
+
+#### Fluxo principal:
+|Passos | Descrição
+|--------|------|
+|Passo 1 | O usuário navega pelo catálogo de e-books disponíveis e seleciona o e-book que deseja comprar.
+|Passo 2 | O usuário adiciona o e-book ao carrinho de compras.
+|Passo 3 | O usuário visualiza o carrinho de compras para revisar os itens selecionados.
+|Passo 4 | O usuário clica no botão "Finalizar Compra" para prosseguir.
+| Passo 5| O sistema solicita ao usuário que revise e confirme as informações de pagamento e entrega.
+| Passo 6| O usuário confirma as informações de pagamento e entrega.
+| Passo 7| O sistema valida as informações fornecidas pelo usuário.
+| Passo 8| O sistema calcula o valor total da compra, incluindo quaisquer taxas aplicáveis, como impostos ou custos de entrega.
+| Passo 9| O sistema solicita ao usuário que confirme a compra.
+| Passo 10| O usuário confirma a compra.
+| Passo 11| O sistema processa o pagamento utilizando o método de pagamento fornecido pelo cliente.
+| Passo 12| O sistema gera um comprovante de compra contendo os detalhes da transação.
+| Passo 13| O sistema disponibiliza o e-book para download ou acesso online ao cliente.
+
+
+
+### Opções de usuário:
+|Opção    | Descrição                                                | Atalho |
+|---------|----------------------------------------------------------|---------
+|Confirmar| Valida os dados preenchidos e confirma a compra do E-Book.
+|Cancelar | Cancela a compra e retorna para o catálogo de E-Books.        |
+
+
+#### Relatório de usuário
+
+| Campo                    | Descrição                                                             | Formato |
+| ------------------------ | --------------------------------------------------------------------- | ------- |
+| Compra realizada com sucesso!| Informa o usuário que a compra foi realizada com sucesso       | Texto   |
+
+#### Fluxo alternativo:
+|Passos  | Descrição
+|--------|----------
+|Passo 7 | Se as informações de pagamento fornecidas pelo cliente forem inválidas, o sistema exibe uma mensagem de erro e solicita que o cliente as corrija.
+|Passo 9 | Se o cliente decidir cancelar a compra, o sistema retorna à página do carrinho de compras e os itens selecionados são removidos.
+|Passo 11| Se ocorrer uma falha no processamento do pagamento, o sistema exibe uma mensagem de erro e solicita que o cliente tente novamente ou entre em contato com o suporte ao cliente.
+|Passo 12| Se houver uma falha ao gerar o comprovante de compra, o sistema exibe uma mensagem de erro e informa ao cliente que o comprovante será enviado por e-mail ou estará disponível em sua conta após a resolução do problema.
