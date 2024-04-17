@@ -301,3 +301,44 @@ O valor da compra é deduzido do saldo do cliente ou cobrado do método de pagam
 |Passos  | Descrição
 |--------|----------
 |Passo 1 | Se nenhum livro corresponder à pesquisa, o sistema exibe uma mensagem informando que nenhum resultado foi encontrado.
+
+
+
+# Planejamento da Iteração #1 (03/04/2024 - 17/04/2024)
+
+## Objetivo da Iteração
+O objetivo desta iteração é criar uma página que liste os livros disponíveis na base de dados. Os usuários devem poder ver detalhes de cada livro, pesquisar por um livro específico e adicionar livros ao carrinho de compras. O carrinho deve listar todos os livros adicionados, permitindo a remoção ou alteração da quantidade de livros.
+
+## Responsabilidades
+- **Desenvolvedor:** ViiniDev
+- **Revisor:** ad-melo
+
+## Features Desenvolvidas
+1. **adicionar_index:** Desenvolvimento da página `index.php` para listar os livros.
+   - **Desenvolvedor:** ViiniDev
+   - **Revisor:** ad-melo
+
+2. **adicionar_carrinho:** Criação da página `carrinho.php` para exibir e gerenciar os itens no carrinho de compras.
+   - **Desenvolvedor:** ad-melo
+   - **Revisor:** ViiniDev
+
+3. **adicionar_pesquisar:** Implementação da funcionalidade de pesquisa de livros na página.
+   - **Desenvolvedor:** joaovictormelo
+   - **Revisor:** graccius
+
+4. **adicionar_detalhes:** Criação da página `detalhes.php` para exibir informações detalhadas de um livro.
+   - **Desenvolvedor:** graccius
+   - **Revisor:** joaovictormelo
+
+5. **adicionar_styles:** Desenvolvimento das folhas de estilo para estilização das páginas.
+   - **Desenvolvedor:** viniciuS2S2
+   - **Revisor:** ViiniDev
+
+## Instruções para Executar o Projeto
+Para executar o site, siga os passos abaixo:
+
+1. Baixe e instale o XAMPP, que fornece o servidor necessário para rodar o PHP.
+2. Baixe e instale o MySQL Workbench para criar uma base de dados. Crie uma base de dados com o nome `ebooks` e uma tabela com o nome `ebooks`, contendo os seguintes atributos: `titulo` (varchar), `autor` (varchar), `descricao` (varchar 200), `preco` (float).
+3. Conecte o código à sua base de dados. No arquivo `index.php`, altere a linha `$conexao = mysqli_connect("localhost", "user_do_mysql", "senha", "ebooks");` substituindo `"user_do_mysql"` e `"senha"` pelo nome de usuário e senha do seu MySQL, respectivamente.
+4. Inicie o Apache no XAMPP.
+5. Abra um navegador e digite o seguinte endereço: `http://localhost/nome_da_pasta/index.php`, onde `nome_da_pasta` é o nome da pasta onde o projeto está localizado.
