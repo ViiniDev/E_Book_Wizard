@@ -334,11 +334,53 @@ O objetivo desta iteração é criar uma página que liste os livros disponívei
    - **Desenvolvedor:** viniciuS2S2
    - **Revisor:** ViiniDev
 
+
+
+# Planejamento da Iteração #2 (17/04/2024 - 08/05/2024)
+
+## Objetivo da Iteração
+O objetivo da iteraçãa foi desenvolver a parte de login, e validações. Onde o usuario possa de cadastrar eu ao fazer o mesmo terá acesso a lista de ebooks e compra, mostrando o carrinho e demais funcionalidades.
+
+## Responsabilidades
+- **Desenvolvedor:** ViiniDev
+- **Revisor:** graccius
+- **Desenvolvedor:** ad-melo
+- **Revisor:** joaovictormelo
+- **Desenvolvedor:** joaovictormelo
+- **Revisor:** ViiniDev
+- **Desenvolvedor:** viniciuS2S2
+- **Revisor:** ad-melo
+- **Desenvolvedor:** graccius
+- **Revisor:** viniciuS2S2
+
+## Features Desenvolvidas
+1. **code-bases:** Desenvolvimento do codigo base atualizado para todo o site.
+   - **Desenvolvedor:** ad-melo
+   - **Revisor:** joaovictormelo
+   - **Link do pull request:** https://github.com/ViiniDev/E_Book_Wizard/pull/9
+
+2. **add-cart:** Criação da página `carrinho` para exibir e gerenciar os itens no carrinho de compras.
+   - **Desenvolvedor:** joaovictormelo
+   - **Revisor:** ViiniDev
+   - **Link do pull request:** https://github.com/ViiniDev/E_Book_Wizard/pull/10
+
+
+3. **add-ebook:** Implementação da funcionalidade de pesquisa de livros na página e funcionalidades que o envolve.
+   - **Desenvolvedor:** viniciuS2S2
+   - **Revisor:** ad-melo, ViiniDev
+   - **Link do pull request:** https://github.com/ViiniDev/E_Book_Wizard/pull/14
+
+4. **add-view-cart:** Criação da página `cart.php` para exibir informações detalhadas do carrinho com os livros adicionados.
+   - **Desenvolvedor:** ViiniDev
+   - **Revisor:** graccius
+   - **Link do pull request:** https://github.com/ViiniDev/E_Book_Wizard/pull/13
+
+5. **add-view-ebook:** Desenvolvimento da parte visual dos ebooks, onde lista e mostra funcionalidades de compra, adicionar ao carrinho e informações.
+   - **Desenvolvedor:** graccius
+   - **Revisor:** viniciuS2S2
+   - **Link do pull request:** https://github.com/ViiniDev/E_Book_Wizard/pull/15
+
 ## Instruções para Executar o Projeto
 Para executar o site, siga os passos abaixo:
 
-1. Baixe e instale o XAMPP, que fornece o servidor necessário para rodar o PHP.
-2. Baixe e instale o MySQL Workbench para criar uma base de dados. Crie uma base de dados com o nome `ebooks` e uma tabela com o nome `ebooks`, contendo os seguintes atributos: `titulo` (varchar), `autor` (varchar), `descricao` (varchar 200), `preco` (float).
-3. Conecte o código à sua base de dados. No arquivo `index.php`, altere a linha `$conexao = mysqli_connect("localhost", "user_do_mysql", "senha", "ebooks");` substituindo `"user_do_mysql"` e `"senha"` pelo nome de usuário e senha do seu MySQL, respectivamente.
-4. Inicie o Apache no XAMPP.
-5. Abra um navegador e digite o seguinte endereço: `http://localhost/nome_da_pasta/index.php`, onde `nome_da_pasta` é o nome da pasta onde o projeto está localizado.
+1. Antes de iniciar o codigo adicionar a database MySQL ebooks.sql, recomendo TablePlus porque eh facil de usar e nao trava link explicando como adicionar database: https://tableplus.com/blog/2018/10/import-export-database.html Para rodar o site so precisa ter o php instalado, abrir o terminal na pasta principal e usar o comando: php -S localhost:3000 -t public
