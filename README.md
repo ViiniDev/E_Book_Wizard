@@ -379,6 +379,8 @@ O objetivo da iteraçãa foi desenvolver a parte de login, e validações. Onde 
    - **Desenvolvedor:** graccius
    - **Revisor:** viniciuS2S2
    - **Link do pull request:** https://github.com/ViiniDev/E_Book_Wizard/pull/15
+   - 
+Link para merge da release completa 1.0.2 : https://github.com/ViiniDev/E_Book_Wizard/pull/18
 
 ## Instruções para Executar o Projeto
 Para executar o site, siga os passos abaixo:
