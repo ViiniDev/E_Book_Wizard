@@ -74,24 +74,17 @@ O objetivo da iteraçãa será refatorar o projeto para formatação de MVC e po
 ## Protótipo de telas dos requisitos
 Link para o pdf feito no figma com as telas :
 # clique [aqui](./prototipos_de_tela/Prototipagem.pdf).
-
-Tela de registro:
-# clique [aqui](./prototipos_de_tela/1.jpeg).
-Tela de Login:
-# clique [aqui](./prototipos_de_tela/2.jpeg).
-Tela Home:
-# clique [aqui](./prototipos_de_tela/3.jpeg).
-Tela dos Ebooks:
-# clique [aqui](./prototipos_de_tela/4.jpeg).
-Tela Sobre de um Ebook:
-# clique [aqui](./prototipos_de_tela/5.jpeg).
-Tela do Carrinho:
-# clique [aqui](./prototipos_de_tela/6.jpeg).
-Tela de Pagamentos e finalização:
-# clique [aqui](./prototipos_de_tela/7.jpeg).
+# Contém telas de :
+      -Tela de registro
+      -Tela de Login
+      -Tela Home
+      -Tela dos Ebooks
+      -Tela Sobre de um Ebook
+      -Tela do Carrinho
+      -Tela de Pagamentos e finalização
 
 
-# Link para a release completa  : 
+# Link para a release completa  : https://github.com/ViiniDev/E_Book_Wizard/pull/26
    # Nesta release contém :
       -Refatoração do codigo: adicionando o padrão MVC
       -Adição das telas de prototipação do site
