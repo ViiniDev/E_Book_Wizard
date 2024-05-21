@@ -32,10 +32,10 @@ O objetivo da iteraçãa foi desenvolver a parte de login, e validações. Onde 
 
                
 
-# Planejamento da Iteração #3 (08/05/2024 - em aberto)
+# Planejamento da Iteração #3 (08/05/2024 - 22/05/2024)
 
 ## Valor da Entrega : 
-Organização e eficiencia.
+Organização e padronização do nosso codigo, para que o deixe mais organizado e facil de ser entendido.
 
 ## Objetivo da Iteração
 O objetivo da iteraçãa será refatorar o projeto para formatação de MVC e possiveis adicões de APIs para melhor desenvolvimento do projeto.
@@ -59,16 +59,42 @@ O objetivo da iteraçãa será refatorar o projeto para formatação de MVC e po
 
 ## Features Desenvolvidas
 
-Em breve...
+1. **:** Desenvolvimento da refatoração do codigo para o padrão MVC.
+   - **Desenvolvedor:** ad-melo
+   - **Revisor:** joaovictormelo e ViiniDev
+   - **Link do pull request:** https://github.com/ViiniDev/E_Book_Wizard/pull/22
+
+2. **prototipagem-telas:** Criação das prototipagem de telas, incluindo as existentes e a que será implementada de pagamentos
+   - **Desenvolvedor:** viniciuS2S2
+   - **Revisor:** graccius
+   - **Link do pull request:** https://github.com/ViiniDev/E_Book_Wizard/pull/23
+
 
 
 ## Protótipo de telas dos requisitos
+Link para o pdf feito no figma com as telas :
+# clique [aqui](./prototipos_de_tela/Prototipagem.pdf).
 
-Em breve...
+Tela de registro:
+# clique [aqui](./prototipos_de_tela/1.jpeg).
+Tela de Login:
+# clique [aqui](./prototipos_de_tela/2.jpeg).
+Tela Home:
+# clique [aqui](./prototipos_de_tela/3.jpeg).
+Tela dos Ebooks:
+# clique [aqui](./prototipos_de_tela/4.jpeg).
+Tela Sobre de um Ebook:
+# clique [aqui](./prototipos_de_tela/5.jpeg).
+Tela do Carrinho:
+# clique [aqui](./prototipos_de_tela/6.jpeg).
+Tela de Pagamentos e finalização:
+# clique [aqui](./prototipos_de_tela/7.jpeg).
+
 
 # Link para a release completa  : 
    # Nesta release contém :
-      -
+      -Refatoração do codigo: adicionando o padrão MVC
+      -Adição das telas de prototipação do site
 
 
 ## Instruções para Executar o Projeto
