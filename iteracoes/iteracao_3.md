@@ -25,7 +25,7 @@ O objetivo da iteraçãa será refatorar o projeto para formatação de MVC e po
 
 ## Features Desenvolvidas
 
-1. **:** Desenvolvimento da refatoração do codigo para o padrão MVC.
+1. **refatorar-codigo:** Desenvolvimento da refatoração do codigo para o padrão MVC.
    - **Desenvolvedor:** ad-melo
    - **Revisor:** joaovictormelo e ViiniDev
    - **Link do pull request:** https://github.com/ViiniDev/E_Book_Wizard/pull/22
@@ -40,7 +40,7 @@ O objetivo da iteraçãa será refatorar o projeto para formatação de MVC e po
 ## Protótipo de telas dos requisitos
 Link para o pdf feito no figma com as telas :
 ## - **clique [aqui](./prototipos_de_tela/Prototipagem.pdf).**
-- **Contém telas de :**
+ ## Contém telas de :
       -Tela de registro
       -Tela de Login
       -Tela Home
@@ -51,6 +51,6 @@ Link para o pdf feito no figma com as telas :
 
 
 ## Link para a release completa  : https://github.com/ViiniDev/E_Book_Wizard/pull/26
-   - **Nesta release contém :**
+   ## Nesta release contém :
       -Refatoração do codigo: adicionando o padrão MVC
       -Adição das telas de prototipação do site
