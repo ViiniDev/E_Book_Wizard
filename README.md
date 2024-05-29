@@ -80,29 +80,19 @@ O objetivo da iteraçãa será refatorar o projeto para adição da página de p
 Link para o pdf feito no figma com as telas :
 
 ## - **clique [aqui](./prototipos_de_tela/Prototipagem.pdf).**
- - **Contém telas de :**
+ ## Contém telas de :
       -Tela de Pagamentos e finalização
 
 
-# clique [aqui](./prototipos_de_tela/Prototipagem.pdf).
-# Contém telas de :
-      -Tela de registro
-      -Tela de Login
-      -Tela Home
-      -Tela dos Ebooks
-      -Tela Sobre de um Ebook
-      -Tela do Carrinho
-      -Tela de Pagamentos e finalização
 
-
-# Link para a release completa  : https://github.com/ViiniDev/E_Book_Wizard/pull/26
-   # Nesta release contém :
+## Link para a release completa  : https://github.com/ViiniDev/E_Book_Wizard/pull/26
+   ## Nesta release contém :
       -Refatoração do codigo: adicionando o padrão MVC
       -Adição das telas de prototipação do site
 
 
 ## Link para a release completa  : 
-   - **Nesta release contém :**
+   ## Nesta release contém :**
       -Descrição :
    
 
