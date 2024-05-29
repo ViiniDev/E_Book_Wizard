@@ -14,9 +14,9 @@ O projeto E-Book Wizard é uma plataforma de comércio eletrônico projetada par
 
 
 # Acesso dos requisitos funcionais
-# Casos de uso expandido
-# Fluxogramas do projeto
-# clique [aqui](./casos_de_uso/README.md).
+- **Casos de uso expandido**
+- **Fluxogramas do projeto**
+## - **clique [aqui](./prototipos_de_tela/Prototipagem.pdf).**
 
 
 # Planejamento da Iteração #1 (03/04/2024 - 17/04/2024) - clique [aqui](./iteracoes/iteracao_1.md).
@@ -32,7 +32,7 @@ O objetivo da iteraçãa foi desenvolver a parte de login, e validações. Onde 
 
                
 
-# Planejamento da Iteração #3 (08/05/2024 - 22/05/2024)
+# Planejamento da Iteração #3 (08/05/2024 - 22/05/2024) - clique [aqui](./iteracoes/iteracao_3.md).
 
 ## Valor da Entrega : 
 Organização e padronização do nosso codigo, para que o deixe mais organizado e facil de ser entendido.
@@ -40,62 +40,53 @@ Organização e padronização do nosso codigo, para que o deixe mais organizado
 ## Objetivo da Iteração
 O objetivo da iteraçãa será refatorar o projeto para formatação de MVC e possiveis adicões de APIs para melhor desenvolvimento do projeto.
 
+
+
+# Planejamento da Iteração #4 (22/05/2024 - 05/06/2024)
+
+## Valor da Entrega : 
+Em aberto
+
+## Objetivo da Iteração
+O objetivo da iteraçãa será refatorar o projeto para adição da página de pagamento com integração a apis, e aplicação de testes unitários.
+
 ## Responsabilidades
 
-- **Desenvolvedor:** ViiniDev - **Responsavel por:** Auxiliar Refatorar codigo para MVC
+- **Desenvolvedor:** ViiniDev - **Responsavel por:** Em aberto
 - **Revisor:** graccius
 
-- **Desenvolvedor:** ad-melo - **Responsavel por:** Auxiliar Refatorar codigo para MVC
+- **Desenvolvedor:** ad-melo - **Responsavel por:** Em aberto
 - **Revisor:** joaovictormelo
 
-- **Desenvolvedor:** joaovictormelo - **Responsavel por:** Auxiliar Refatorar codigo para MVC
+- **Desenvolvedor:** joaovictormelo - **Responsavel por:** Em aberto
 - **Revisor:** ViiniDev
 
-- **Desenvolvedor:** viniciuS2S2 - **Responsavel por:** Prototipos de telas
+- **Desenvolvedor:** viniciuS2S2 - **Responsavel por:** Em aberto
 - **Revisor:** ad-melo
 
-- **Desenvolvedor:** graccius - **Responsavel por:** Auxiliar Prototipos de telas
+- **Desenvolvedor:** graccius - **Responsavel por:** Em aberto
 - **Revisor:** viniciuS2S2
 
 ## Features Desenvolvidas
 
-1. **:** Desenvolvimento da refatoração do codigo para o padrão MVC.
-   - **Desenvolvedor:** ad-melo
-   - **Revisor:** joaovictormelo e ViiniDev
-   - **Link do pull request:** https://github.com/ViiniDev/E_Book_Wizard/pull/22
-
-2. **prototipagem-telas:** Criação das prototipagem de telas, incluindo as existentes e a que será implementada de pagamentos
-   - **Desenvolvedor:** viniciuS2S2
-   - **Revisor:** graccius
-   - **Link do pull request:** https://github.com/ViiniDev/E_Book_Wizard/pull/23
+1. **nomedafeature:** descrição
+   - **Desenvolvedor:** 
+   - **Revisor:** 
+   - **Link do pull request:** 
 
 
 
 ## Protótipo de telas dos requisitos
 Link para o pdf feito no figma com as telas :
-# clique [aqui](./prototipos_de_tela/Prototipagem.pdf).
-
-Tela de registro:
-# clique [aqui](./prototipos_de_tela/1.jpeg).
-Tela de Login:
-# clique [aqui](./prototipos_de_tela/2.jpeg).
-Tela Home:
-# clique [aqui](./prototipos_de_tela/3.jpeg).
-Tela dos Ebooks:
-# clique [aqui](./prototipos_de_tela/4.jpeg).
-Tela Sobre de um Ebook:
-# clique [aqui](./prototipos_de_tela/5.jpeg).
-Tela do Carrinho:
-# clique [aqui](./prototipos_de_tela/6.jpeg).
-Tela de Pagamentos e finalização:
-# clique [aqui](./prototipos_de_tela/7.jpeg).
+## - **clique [aqui](./prototipos_de_tela/Prototipagem.pdf).**
+ - **Contém telas de :**
+      -Tela de Pagamentos e finalização
 
 
-# Link para a release completa  : 
-   # Nesta release contém :
-      -Refatoração do codigo: adicionando o padrão MVC
-      -Adição das telas de prototipação do site
-
+## Link para a release completa  : 
+   - **Nesta release contém :**
+      -Descrição :
+   
 
 ## Instruções para Executar o Projeto
 Para executar o site, siga os passos abaixo:
