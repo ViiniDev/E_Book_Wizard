@@ -85,14 +85,8 @@ Link para o pdf feito no figma com as telas :
 
 
 
-## Link para a release completa  : https://github.com/ViiniDev/E_Book_Wizard/pull/26
-   ## Nesta release contém :
-      -Refatoração do codigo: adicionando o padrão MVC
-      -Adição das telas de prototipação do site
-
-
 ## Link para a release completa  : 
-   ## Nesta release contém :**
+   ## Nesta release contém :
       -Descrição :
    
 
