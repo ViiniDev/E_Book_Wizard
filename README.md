@@ -102,7 +102,7 @@ Link para o pdf feito no figma com as telas :
 
 
 
-## Link para a release completa  : https://github.com/ViiniDev/E_Book_Wizard/pull/39
+## Link para a release completa  : https://github.com/ViiniDev/E_Book_Wizard/pull/40
    ## Nesta release contém :
       -Descrição : Nesta release contém adição da página de pagamentos e junção da mesma com uma api para pagamentos.
 
