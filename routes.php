@@ -21,3 +21,6 @@ $router->post('/register', 'registration/store.php')->only('guest');
 $router->get('/login', 'session/create.php')->only('guest');
 $router->post('/session', 'session/store.php')->only('guest');
 $router->delete('/session', 'session/destroy.php')->only('auth');
+
+//$router->post('/process_payment', 'PaymentController@processPayment');
+//$router->get('/success', function () {    require 'views/success.php';});
