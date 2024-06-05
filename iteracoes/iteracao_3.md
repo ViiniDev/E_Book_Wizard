@@ -47,7 +47,7 @@ Link para o pdf feito no figma com as telas :
       -Tela dos Ebooks
       -Tela Sobre de um Ebook
       -Tela do Carrinho
-      -Tela de Pagamentos e finalização
+      -Tela de Pagamentos 
 
 
 ## Link para a release completa  : https://github.com/ViiniDev/E_Book_Wizard/pull/26
