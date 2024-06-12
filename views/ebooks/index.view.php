@@ -1,7 +1,8 @@
 <?php require base_path('views/partials/head.php') ?>
 <?php require base_path('views/partials/nav.php') ?>
 <?php require base_path('views/partials/banner.php') ?>
-<?php $is_admin = false; // Supondo que o usuário não é administrador por padrão
+<?php 
+$is_admin = false; // Supondo que o usuário não é administrador por padrão
 
 if (isset($_SESSION['user']) && $_SESSION['user']['is_admin']) {
     $is_admin = true;
@@ -20,40 +21,39 @@ if (isset($_SESSION['user']) && $_SESSION['user']['is_admin']) {
             <li class="ebook-item border border-gray-300 rounded-lg shadow-md">
                 <div class="image-container overflow-hidden">
                     <?php
-                   $ebook_id = $ebook['id'];
-                  require base_path('Http/controllers/upload/display.php')
-                  ?>
-              </div>
+                    $ebook_id = $ebook['id'];
+                    require base_path('Http/controllers/upload/display.php');
+                    ?>
+                </div>
                 <div class="p-4 ebook-details">
                     <h3 class="ebook-title text-lg font-semibold mb-2">
                     <a href="/ebook?id=<?= $ebook['id'] ?>" class="ebook-link"><?= htmlspecialchars($ebook['title']) ?></a>
-                </h3>
-            </div>
-            <div>
-                <div class="ebook-details mx-4">
-                    <p class="ebook-author mb-2"><?= 'Autor: ' . htmlspecialchars($ebook['author']) ?></p>
-                    <p class="ebook-price"><?= 'Preço: R$' . number_format($ebook['price'], 2) ?></p>
+                    </h3>
+                    <?php if ($is_admin) : ?>
+                        <p class="ebook-id text-sm text-gray-600">ID: <?= $ebook['id'] ?></p>
+                    <?php endif; ?>
                 </div>
-            </div>
-            <div class="ebook-actions p-4">
-            <?php if ($is_admin) : ?>
-        <form method="POST" action="/excluir_ebook">
-            <input type="hidden" name="ebook_id" value="<?= $ebook['id'] ?>">
-            <button type="submit" class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-md">Excluir</button>
-        </form>
+                <div>
+                    <div class="ebook-details mx-4">
+                        <p class="ebook-author mb-2"><?= 'Autor: ' . htmlspecialchars($ebook['author']) ?></p>
+                        <p class="ebook-price"><?= 'Preço: R$' . number_format($ebook['price'], 2) ?></p>
+                    </div>
+                </div>
+                <div class="ebook-actions p-4">
+    <?php if ($is_admin) : ?>
+        <button class="delete-button bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-md" data-id="<?= $ebook['id'] ?>">Excluir</button>
     <?php endif; ?>
-                <form method="POST" action="/cart" class="flex items-center">
-                    <input type="hidden" name="ebook_id" value="<?= $ebook['id'] ?>">
-                    <input type="hidden" name="ebook_title" value="<?= htmlspecialchars($ebook['title']) ?>">
-                    <input type="hidden" name="ebook_price" value="<?= $ebook['price'] ?>">
-                    <input type="number" name="quantity" value="1" min="1" class="quantity-input border border-gray-300 rounded-md px-2 py-1 mr-2 w-16">
-                    <button type="submit" class="add-to-cart-btn bg-blue-500 text-white px-4 py-2 rounded">Adicionar ao Cart</button>
-                </form>
-            </div>
-        </li>
-    <?php endforeach; ?>
-   </ul>
-
+    <form method="POST" action="/cart" class="flex items-center">
+        <input type="hidden" name="ebook_id" value="<?= $ebook['id'] ?>">
+        <input type="hidden" name="ebook_title" value="<?= htmlspecialchars($ebook['title']) ?>">
+        <input type="hidden" name="ebook_price" value="<?= $ebook['price'] ?>">
+        <input type="number" name="quantity" value="1" min="1" class="quantity-input border border-gray-300 rounded-md px-2 py-1 mr-2 w-16">
+        <button type="submit" class="add-to-cart-btn bg-blue-500 text-white px-4 py-2 rounded">Adicionar ao Carrinho</button>
+    </form>
+</div>
+            </li>
+        <?php endforeach; ?>
+        </ul>
         </div>
     </div>
 </main>
@@ -81,7 +81,31 @@ if (isset($_SESSION['user']) && $_SESSION['user']['is_admin']) {
                 }
             });
         });
+        // Handle the delete button click
+        $('.delete-button').click(function(event) {
+            event.preventDefault(); // Prevent the default button action
+
+            var button = $(this); // Get the button that was clicked
+            var ebookId = button.data('id'); // Get the ebook ID from the data attribute
+
+            $.ajax({
+                url: '/ebooks_excluir', // URL of the server-side script to handle the deletion
+                type: 'POST',
+                data: {
+                    ebook_id: ebookId
+                }, // Data to be sent to the server
+                success: function(response) {
+                    // Handle the response from the server
+                    button.closest('li').remove(); // Remove the ebook item from the list
+                },
+                error: function(xhr, status, error) {
+                    // Handle errors if the AJAX request fails
+                    console.error(xhr.responseText);
+                }
+            });
+        });
     });
 </script>
+
 
 <?php require base_path('views/partials/footer.php') ?>

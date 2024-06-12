@@ -33,7 +33,7 @@
                 </form>
             </div>
                 <div class="mt-8">
-                    <form action="/ebooks" method="POST" >
+                    <form action="/upload" method="POST" >
                         
                         <div class="mb-4">
                             <label for="title" class="block text-sm font-medium text-gray-700">Title:</label>
