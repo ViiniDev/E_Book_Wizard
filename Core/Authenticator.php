@@ -19,10 +19,7 @@ class Authenticator
         $user = $this->userModel->findByEmail($email);
 
         if ($user && password_verify($password, $user['password'])) {
-            $this->login([
-                'email' => $email
-            ]);
-
+            $this->login($user); // Passa o usuário inteiro para o método login
             return true;
         }
 
@@ -32,8 +29,18 @@ class Authenticator
     public function login($user)
     {
         $_SESSION['user'] = [
-            'email' => $user['email']
+            'id' => $user['id'],
+            'email' => $user['email'],
+            'is_admin' => $user['is_admin'] // Adicionando o campo is_admin à sessão
         ];
+        
+        // Se o usuário for admin, define 'is_admin' como true na sessão
+        if ($user['email'] == 'admin@admin.com') {
+            $_SESSION['user']['is_admin'] = true;
+        } else {
+            $_SESSION['user']['is_admin'] = false;
+        }
+        
         session_regenerate_id(true);
     }
 
