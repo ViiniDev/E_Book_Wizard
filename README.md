@@ -42,23 +42,33 @@ O objetivo da iteraçãa será refatorar o projeto para formatação de MVC e po
 
 
 
-# Planejamento da Iteração #4 (22/05/2024 - 05/06/2024)
+# Planejamento da Iteração #4 (22/05/2024 - 05/06/2024)- clique [aqui](./iteracoes/iteracao_4.md).
 
 ## Valor da Entrega : 
 Posibilidade de executar um cadastro de ebook, e fazer deleções.
 
 ## Objetivo da Iteração
-O objetivo da iteraçãa será refatorar o projeto para adição da página de pagamento com integração a api.
+O objetivo da iteraçãa será refatorar o projeto para adição da funcionalidade de cadastro de ebook pelo admin.
+
+
+
+# Planejamento da Iteração #5 (05/06/2024 - 19/06/2024)
+
+## Valor da Entrega : 
+Site funcional após execução de teste unitarios com PHPUnit
+
+## Objetivo da Iteração
+O objetivo da iteraçãa será refatorar o projeto para adição de testes unitarios permite a manutenção e a escalabilidade dos testes em conjunto com a aplicação.
 
 ## Responsabilidades
 
-- **Desenvolvedor:** ViiniDev - **Responsavel por:** Desenvolver a integração com a api 
+- **Desenvolvedor:** ViiniDev - **Responsavel por:** Desenvolver refatoração e resolver falhas 
 - **Revisor:** ad-melo
 
-- **Desenvolvedor:** ad-melo - **Responsavel por:** Desenvolver parte beckend da página de pagamento
+- **Desenvolvedor:** ad-melo - **Responsavel por:** Desenvolver refatoração e resolver falhas 
 - **Revisor:** joaovictormelo
 
-- **Desenvolvedor:** joaovictormelo - **Responsavel por:** Desenvolver página de pagamento parte visual
+- **Desenvolvedor:** joaovictormelo - **Responsavel por:** Desenvolver refatoração e resolver falhas 
 - **Revisor:** ViiniDev
 
 - **Desenvolvedor:** viniciuS2S2 - **Responsavel por:** Em aberto
@@ -69,20 +79,21 @@ O objetivo da iteraçãa será refatorar o projeto para adição da página de p
 
 ## Features Desenvolvidas
 
-1. **viwer-pagamento:** Desenvolveu página de pagamento
+1. **em-aberto:** em aberto
    - **Desenvolvedor:** joaovictormelo
    - **Revisor:** ViiniDev
-   - **Link do pull request:** https://github.com/ViiniDev/E_Book_Wizard/pull/36
+   - **Link do pull request:** https://github.com/ViiniDev/E_Book_Wizard/pull/
 
-2. **pagamento-controller:** Desenvolveu o beckend da página de pagamento
+2. **em-aberto:** em aberto
    - **Desenvolvedor:** ad-melo
    - **Revisor:** joaovictormelo
-   - **Link do pull request:** https://github.com/ViiniDev/E_Book_Wizard/pull/37
+   - **Link do pull request:** https://github.com/ViiniDev/E_Book_Wizard/pull/
 
-3. **api-pagamento:** Desenvolveu refatoração do codigo para acesso admin
+3. **em-aberto:** em aberto
+
    - **Desenvolvedor:** ViiniDev
    - **Revisor:** ad-melo
-   - **Link do pull request:** https://github.com/ViiniDev/E_Book_Wizard/pull/35
+   - **Link do pull request:** https://github.com/ViiniDev/E_Book_Wizard/pull/
 
 
 ## Protótipo de telas dos requisitos
@@ -100,18 +111,23 @@ Link para o pdf feito no figma com as telas :
       -Tela de Pagamentos 
 
 
-## Link para a release completa  : https://github.com/ViiniDev/E_Book_Wizard/pull/50
+
+## Link para a release completa  : https://github.com/ViiniDev/E_Book_Wizard/pull/
 
    ## Nesta release contém :
-      -Descrição : Nesta release contém adição da página de pagamentos e junção com uma api e cadastro de livros.
+      -Descrição : Nesta release contém ... em aberto
 
 ## Link para a Trello da equipe  :   
 https://trello.com/invite/b/KSIbSb3i/ATTI9fc4c17b040a0eca2a1831473f804cceF5B0E0A6/iteracoes-ebookwizard
 
 ## Link para video do site da equipe  :   
-- https://youtu.be/jm36ifBuI1U
-- https://youtu.be/ONAIDxYapOg
+
+- https://youtu.be/jm36ifBuI1U - sem admin
+- https://youtu.be/ONAIDxYapOg - com admin
+
 
 ## Instruções para Executar o Projeto
 Para executar o site, siga os passos abaixo:
-1. Antes de iniciar o codigo adicionar a database MySQL ebooks.sql, recomendo TablePlus porque eh facil de usar e nao trava link explicando como adicionar database: https://tableplus.com/blog/2018/10/import-export-database.html Para rodar o site so precisa ter o php instalado, abrir o terminal na pasta principal e usar o comando: php -S localhost:3000 -t public
+1. Antes de iniciar o codigo adicionar a database MySQL ebooks.sql, recomendo TablePlus porque é facil de usar e não trava, link explicando como adicionar database: https://tableplus.com/blog/2018/10/import-export-database.html.
+2. Para rodar o site so precisa ter o php instalado, abrir o terminal na pasta principal e usar o comando: php -S localhost:3000 -t public
+
