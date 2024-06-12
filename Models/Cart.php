@@ -55,6 +55,12 @@ class Cart
             'user_id' => $userId
         ]);
     }
+    public function clearCart($userId)
+    {
+        $this->db->query('DELETE FROM cart WHERE user_id = :user_id', [
+            'user_id' => $userId
+        ]);
+    }
 
     public function updateCartItemQuantity($userId, $ebookId, $quantity)
     {

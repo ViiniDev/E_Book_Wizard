@@ -28,9 +28,9 @@ try {
 
             echo "Ebook adicionado com sucesso.";
         }
-        // Verifica se é para atualizar a imagem de um eBook existente
-        elseif (isset($_POST['ebook_id']) && isset($_FILES["image"]) && $_FILES["image"]["error"] == UPLOAD_ERR_OK) {
-            $id = $_POST['ebook_id'];
+        // Verifica se é para enviar a imagem de um eBook existente
+        elseif (isset($_POST['ebook_id_img']) && isset($_FILES["image"]) && $_FILES["image"]["error"] == UPLOAD_ERR_OK) {
+            $id = $_POST['ebook_id_img'];
             $image_data = file_get_contents($_FILES["image"]["tmp_name"]);
 
             // Verifica se o ID é válido
@@ -46,6 +46,25 @@ try {
             $stmt->execute();
 
             echo "Imagem do ebook atualizada com sucesso.";
+        }
+        // Verifica se é para enviar o PDF de um eBook existente
+        elseif (isset($_POST['ebook_id_pdf']) && isset($_FILES["pdf_ebook"]) && $_FILES["pdf_ebook"]["error"] == UPLOAD_ERR_OK) {
+            $id = $_POST['ebook_id_pdf'];
+            $pdf_data = file_get_contents($_FILES["pdf_ebook"]["tmp_name"]);
+
+            // Verifica se o ID é válido
+            if (filter_var($id, FILTER_VALIDATE_INT) === false) {
+                echo "ID do ebook inválido.";
+                exit;
+            }
+
+            // Atualiza o PDF no banco de dados
+            $stmt = $conn->prepare("UPDATE ebooks SET pdf_file = :pdf_file WHERE id = :id");
+            $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+            $stmt->bindParam(':pdf_file', $pdf_data, PDO::PARAM_LOB);
+            $stmt->execute();
+
+            echo "PDF do ebook atualizado com sucesso.";
         } else {
             echo "Erro: Por favor, preencha todos os campos obrigatórios.";
         }
@@ -57,4 +76,3 @@ try {
 }
 
 $conn = null;
-?>
