@@ -3,6 +3,7 @@
 use Stripe\Charge;
 use Stripe\Customer;
 
+
 class PaymentController
 {
     public function processPayment()
@@ -23,3 +24,4 @@ class PaymentController
         header('Location: /success');
     }
 }
+
