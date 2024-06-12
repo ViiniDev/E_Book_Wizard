@@ -79,17 +79,18 @@ O objetivo da iteraçãa será refatorar o projeto para adição de testes unita
 
 ## Features Desenvolvidas
 
-1. **viwer-pagamento:** em aberto
+1. **em-aberto:** em aberto
    - **Desenvolvedor:** joaovictormelo
    - **Revisor:** ViiniDev
    - **Link do pull request:** https://github.com/ViiniDev/E_Book_Wizard/pull/
 
-2. **pagamento-controller:** em aberto
+2. **em-aberto:** em aberto
    - **Desenvolvedor:** ad-melo
    - **Revisor:** joaovictormelo
    - **Link do pull request:** https://github.com/ViiniDev/E_Book_Wizard/pull/
 
-3. **api-pagamento:** em aberto
+3. **em-aberto:** em aberto
+
    - **Desenvolvedor:** ViiniDev
    - **Revisor:** ad-melo
    - **Link do pull request:** https://github.com/ViiniDev/E_Book_Wizard/pull/
@@ -110,6 +111,7 @@ Link para o pdf feito no figma com as telas :
       -Tela de Pagamentos 
 
 
+
 ## Link para a release completa  : https://github.com/ViiniDev/E_Book_Wizard/pull/
 
    ## Nesta release contém :
@@ -119,6 +121,7 @@ Link para o pdf feito no figma com as telas :
 https://trello.com/invite/b/KSIbSb3i/ATTI9fc4c17b040a0eca2a1831473f804cceF5B0E0A6/iteracoes-ebookwizard
 
 ## Link para video do site da equipe  :   
+
 - https://youtu.be/jm36ifBuI1U - sem admin
 - https://youtu.be/ONAIDxYapOg - com admin
 
