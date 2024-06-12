@@ -13,7 +13,7 @@
                             <?php $total_cost = 0 ?>
 
                             <?php foreach ($cart as $item) : ?>
-                                <?php $total_cost += $item['cost'] ?>
+                                <?php $total_cost += $item['ebook_price'] * $item['quantity'] ?>
 
                                 <li class="cart-item flex justify-between items-center border-b border-gray-300 py-4">
                                     <div class="flex items-center">
@@ -25,9 +25,10 @@
                                         </div>
                                         <div class="cart-item-details">
                                             <p class="cart-item-title">
-                                                <a href="/ebook?id=<?= $item['ebook_id'] ?>" class="ebook-link"><?= $item['ebook_title'] ?></a>
+                                                <a href="/ebook?id=<?= $item['ebook_id'] ?>" class="ebook-link"><?= htmlspecialchars($item['ebook_title']) ?></a>
                                             </p>
-                                            <p class="cart-item-price">Preço: R$<?= number_format($item['cost'], 2) ?></p>
+                                            <p class="cart-item-price">Preço: R$<?= number_format($item['ebook_price'], 2) ?></p>
+                                            <p class="cart-item-quantity">Quantidade: <?= htmlspecialchars($item['quantity']) ?></p>
                                         </div>
                                     </div>
                                     <div class="cart-item-actions">
@@ -62,3 +63,4 @@
 </main>
 
 <?php require base_path('views/partials/footer.php') ?>
+
