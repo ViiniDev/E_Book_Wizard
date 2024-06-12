@@ -45,14 +45,14 @@ O objetivo da iteraçãa será refatorar o projeto para formatação de MVC e po
 # Planejamento da Iteração #4 (22/05/2024 - 05/06/2024)
 
 ## Valor da Entrega : 
-Posibilidade de executar uma compra de ebook, e fazer o pagamento.
+Posibilidade de executar um cadastro de ebook, e fazer deleções.
 
 ## Objetivo da Iteração
-O objetivo da iteraçãa será refatorar o projeto para adição da página de pagamento com integração a api Stripe.
+O objetivo da iteraçãa será refatorar o projeto para adição da página de pagamento com integração a api.
 
 ## Responsabilidades
 
-- **Desenvolvedor:** ViiniDev - **Responsavel por:** Desenvolver a integração com a api Stripe
+- **Desenvolvedor:** ViiniDev - **Responsavel por:** Desenvolver a integração com a api 
 - **Revisor:** ad-melo
 
 - **Desenvolvedor:** ad-melo - **Responsavel por:** Desenvolver parte beckend da página de pagamento
@@ -79,7 +79,7 @@ O objetivo da iteraçãa será refatorar o projeto para adição da página de p
    - **Revisor:** joaovictormelo
    - **Link do pull request:** https://github.com/ViiniDev/E_Book_Wizard/pull/37
 
-3. **api-pagamento:** Desenvolveu integração da api Stripe de pagamento
+3. **api-pagamento:** Desenvolveu refatoração do codigo para acesso admin
    - **Desenvolvedor:** ViiniDev
    - **Revisor:** ad-melo
    - **Link do pull request:** https://github.com/ViiniDev/E_Book_Wizard/pull/35
@@ -100,13 +100,17 @@ Link para o pdf feito no figma com as telas :
       -Tela de Pagamentos 
 
 
-## Link para a release completa  : https://github.com/ViiniDev/E_Book_Wizard/pull/41
+## Link para a release completa  : https://github.com/ViiniDev/E_Book_Wizard/pull/50
 
    ## Nesta release contém :
-      -Descrição : Nesta release contém adição da página de pagamentos e junção da mesma com uma api para pagamentos.
+      -Descrição : Nesta release contém adição da página de pagamentos e junção com uma api e cadastro de livros.
 
 ## Link para a Trello da equipe  :   
 https://trello.com/invite/b/KSIbSb3i/ATTI9fc4c17b040a0eca2a1831473f804cceF5B0E0A6/iteracoes-ebookwizard
+
+## Link para video do site da equipe  :   
+- https://youtu.be/jm36ifBuI1U
+- https://youtu.be/ONAIDxYapOg
 
 ## Instruções para Executar o Projeto
 Para executar o site, siga os passos abaixo:
