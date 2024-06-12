@@ -24,6 +24,8 @@
                     </p>
                     <form method="POST" action="/cart">
                         <input type="hidden" name="ebook_id" value="<?= $ebook['id'] ?>">
+                        <input type="hidden" name="ebook_title" value="<?= htmlspecialchars($ebook['title']) ?>">
+                        <input type="hidden" name="ebook_price" value="<?= $ebook['price'] ?>">
                         <input type="number" name="quantity" value="1" min="1" class="quantity-input">
                         <button type="submit" class="add-to-cart-btn">Adicionar ao carrinho</button>
                     </form>
@@ -32,5 +34,7 @@
         </div>
     </div>
 </main>
+
+
 
 <?php require base_path('views/partials/footer.php') ?>
