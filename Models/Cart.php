@@ -45,7 +45,6 @@ class Cart
                 'ebook_title' => $ebookTitle,
                 'ebook_price' => $ebookPrice
             ]);
-            return true;
         }
     }
 
