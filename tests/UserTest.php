@@ -14,7 +14,7 @@ class UserTest extends TestCase
         m::close();
     }
 
-    public function testGetUserId()
+    public function test_get_user_id()
     {
         // Simula os dados do usuário na sessão
         $_SESSION['user'] = ['email' => 'test@example.com'];
@@ -33,8 +33,7 @@ class UserTest extends TestCase
             ->andReturn(['id' => 1]);
 
         // Instancia a classe User com o mock de Database
-        $user = new User();
-        $user->setDatabase($mockDb); // Injeta o mock diretamente
+        $user = new User($mockDb);
 
         // Testa o método get_User_Id
         $userId = $user->get_User_Id();
@@ -43,8 +42,3 @@ class UserTest extends TestCase
         $this->assertEquals(1, $userId);
     }
 }
-
-
-
-//oh God, looks like its working... the map the leads to you, the map the leads to you
-//and nothing i can do
