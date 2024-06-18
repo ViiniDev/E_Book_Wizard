@@ -79,17 +79,18 @@ O objetivo da iteraçãa será refatorar o projeto para adição de testes unita
 
 ## Features Desenvolvidas
 
-1. **viwer-pagamento:** em aberto
+1. **em-aberto:** em aberto
    - **Desenvolvedor:** joaovictormelo
    - **Revisor:** ViiniDev
    - **Link do pull request:** https://github.com/ViiniDev/E_Book_Wizard/pull/
 
-2. **pagamento-controller:** em aberto
+2. **em-aberto:** em aberto
    - **Desenvolvedor:** ad-melo
    - **Revisor:** joaovictormelo
    - **Link do pull request:** https://github.com/ViiniDev/E_Book_Wizard/pull/
 
-3. **api-pagamento:** em aberto
+3. **em-aberto:** em aberto
+
    - **Desenvolvedor:** ViiniDev
    - **Revisor:** ad-melo
    - **Link do pull request:** https://github.com/ViiniDev/E_Book_Wizard/pull/
@@ -110,6 +111,7 @@ Link para o pdf feito no figma com as telas :
       -Tela de Pagamentos 
 
 
+
 ## Link para a release completa  : https://github.com/ViiniDev/E_Book_Wizard/pull/
 
    ## Nesta release contém :
@@ -119,6 +121,7 @@ Link para o pdf feito no figma com as telas :
 https://trello.com/invite/b/KSIbSb3i/ATTI9fc4c17b040a0eca2a1831473f804cceF5B0E0A6/iteracoes-ebookwizard
 
 ## Link para video do site da equipe  :   
+
 - https://youtu.be/jm36ifBuI1U - sem admin
 - https://youtu.be/ONAIDxYapOg - com admin
 
@@ -128,3 +131,6 @@ Para executar o site, siga os passos abaixo:
 1. Antes de iniciar o codigo adicionar a database MySQL ebooks.sql, recomendo TablePlus porque é facil de usar e não trava, link explicando como adicionar database: https://tableplus.com/blog/2018/10/import-export-database.html.
 2. Para rodar o site so precisa ter o php instalado, abrir o terminal na pasta principal e usar o comando: php -S localhost:3000 -t public
 
+
+## Instruções para Executar os Testes
+1. Para executar os testes, abrir o terminal na pasta principal e usar o comando: vendor\bin\phpunit tests --colors
