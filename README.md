@@ -84,7 +84,7 @@ O objetivo da iteraçãa será refatorar o projeto para adição de testes unita
    - **Revisor:** ViiniDev
    - **Link do pull request:** https://github.com/ViiniDev/E_Book_Wizard/pull/54
 
-2. **em-aberto:** Aplicação de testes unitarios
+2. **Feature/test:** Aplicação de testes unitarios
    - **Desenvolvedor:** ad-melo
    - **Revisor:** joaovictormelo
    - **Link do pull request:** https://github.com/ViiniDev/E_Book_Wizard/pull/54
@@ -131,10 +131,10 @@ Link para o pdf feito no figma com as telas :
       - vendor\bin\phpunit tests --filter=UserTest::testFindByEmail --colors
 
 
-## Link para a release completa  : https://github.com/ViiniDev/E_Book_Wizard/pull/
+## Link para a release completa  : https://github.com/ViiniDev/E_Book_Wizard/pull/58
 
    ## Nesta release contém :
-      -Descrição : Nesta release contém ... em aberto
+      -Descrição : Nesta release contém aplicação dos testes unitarios no codigo
 
 ## Link para a Trello da equipe  :   
 https://trello.com/invite/b/KSIbSb3i/ATTI9fc4c17b040a0eca2a1831473f804cceF5B0E0A6/iteracoes-ebookwizard
