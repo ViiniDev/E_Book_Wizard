@@ -113,22 +113,32 @@ Link para o pdf feito no figma com as telas :
 ## Instruções para Executar os Testes
 1. Para executar os testes, abrir o terminal na pasta principal e usar o comando: 
    ## Instalar o composer e mockary:
-   -composer require --dev mockery/mockery     
-   -composer require --dev phpunit/phpunit ^11  
+   - digite composer install no terminal para baixar as dependencias.
+   ou instale os : 
+   - composer require --dev mockery/mockery     
+   - composer require --dev phpunit/phpunit ^11 
+    
    ## teste :
-      - vendor\bin\phpunit tests --colors  (executa todos os testes)
+         (executa todos os testes)
+      - vendor\bin\phpunit tests --colors  
       - vendor\bin\phpunit tests --filter=Cart --colors (executa todos os teste da classe cart)
       - vendor\bin\phpunit tests --filter=CartTest::test_add_to_cart --colors
+      - vendor\bin\phpunit tests --filter=CartTest::test_clear_cart
+      - vendor\bin\phpunit tests --filter=CartTest::test_update_cart_item_quantity
+      - vendor\bin\phpunit tests --filter=CartTest::test_get_cart_quantity
       - vendor\bin\phpunit tests --filter=CartTest::test_add_to_cart_existing_item --colors
       - vendor\bin\phpunit tests --filter=CartTest::testRemoveFromCart --colors
-      - vendor\bin\phpunit tests --filter=Ebook --colors (executa todos da classe ebook)
+         (executa todos da classe ebook)
+      - vendor\bin\phpunit tests --filter=Ebook --colors 
       - vendor\bin\phpunit tests --filter=EbookTest::test_get_all_ebooks --colors
       - vendor\bin\phpunit tests --filter=EbookTest::test_search_ebooks --colors
       - vendor\bin\phpunit tests --filter=EbookTest::testGetEbookById --colors
-      - vendor\bin\phpunit tests --filter=User --colors (executa todos da classe User)
+         (executa todos da classe User)
+      - vendor\bin\phpunit tests --filter=User --colors 
       - vendor\bin\phpunit tests --filter=UserTest::test_get_user_id --colors
       - vendor\bin\phpunit tests --filter=UserTest::test_creat --colors
       - vendor\bin\phpunit tests --filter=UserTest::testFindByEmail --colors
+      
 
 
 ## Link para a release completa  : https://github.com/ViiniDev/E_Book_Wizard/pull/58
