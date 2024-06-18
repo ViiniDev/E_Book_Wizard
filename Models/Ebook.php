@@ -9,9 +9,9 @@ class Ebook
 {
     protected $db;
 
-    public function __construct()
+    public function __construct($db = null)
     {
-        $this->db = App::resolve(Database::class);
+        $this->db = $db ?: App::resolve(Database::class);
     }
 
     public function getAllEbooks()
@@ -30,5 +30,4 @@ class Ebook
         return $this->db->query('SELECT * FROM ebooks WHERE id = :id', ['id' => $id])->find();
     }
     
-
 }

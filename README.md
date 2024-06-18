@@ -62,13 +62,13 @@ O objetivo da iteraçãa será refatorar o projeto para adição de testes unita
 
 ## Responsabilidades
 
-- **Desenvolvedor:** ViiniDev - **Responsavel por:** Desenvolver refatoração e resolver falhas 
+- **Desenvolvedor:** ViiniDev - **Responsavel por:** Desenvolver refatoração e resolver falhas com phpunit
 - **Revisor:** ad-melo
 
-- **Desenvolvedor:** ad-melo - **Responsavel por:** Desenvolver refatoração e resolver falhas 
+- **Desenvolvedor:** ad-melo - **Responsavel por:** Desenvolver refatoração e resolver falhas com phpunit
 - **Revisor:** joaovictormelo
 
-- **Desenvolvedor:** joaovictormelo - **Responsavel por:** Desenvolver refatoração e resolver falhas 
+- **Desenvolvedor:** joaovictormelo - **Responsavel por:** Desenvolver refatoração e resolver falhas com phpunit
 - **Revisor:** ViiniDev
 
 - **Desenvolvedor:** viniciuS2S2 - **Responsavel por:** Em aberto
@@ -79,21 +79,21 @@ O objetivo da iteraçãa será refatorar o projeto para adição de testes unita
 
 ## Features Desenvolvidas
 
-1. **em-aberto:** em aberto
+1. **Feature/test:** Aplicação de testes unitarios
    - **Desenvolvedor:** joaovictormelo
    - **Revisor:** ViiniDev
-   - **Link do pull request:** https://github.com/ViiniDev/E_Book_Wizard/pull/
+   - **Link do pull request:** https://github.com/ViiniDev/E_Book_Wizard/pull/54
 
-2. **em-aberto:** em aberto
+2. **Feature/test:** Aplicação de testes unitarios
    - **Desenvolvedor:** ad-melo
    - **Revisor:** joaovictormelo
-   - **Link do pull request:** https://github.com/ViiniDev/E_Book_Wizard/pull/
+   - **Link do pull request:** https://github.com/ViiniDev/E_Book_Wizard/pull/54
 
-3. **em-aberto:** em aberto
+3. **test-unit:** Aplicação de testes unitarios e refatoração
 
    - **Desenvolvedor:** ViiniDev
    - **Revisor:** ad-melo
-   - **Link do pull request:** https://github.com/ViiniDev/E_Book_Wizard/pull/
+   - **Link do pull request:** https://github.com/ViiniDev/E_Book_Wizard/pull/55
 
 
 ## Protótipo de telas dos requisitos
@@ -110,12 +110,31 @@ Link para o pdf feito no figma com as telas :
       -Tela do Carrinho
       -Tela de Pagamentos 
 
+## Instruções para Executar os Testes
+1. Para executar os testes, abrir o terminal na pasta principal e usar o comando: 
+   ## Instalar o composer e mockary:
+   -composer require --dev mockery/mockery     
+   -composer require --dev phpunit/phpunit ^11  
+   ## teste :
+      - vendor\bin\phpunit tests --colors  (executa todos os testes)
+      - vendor\bin\phpunit tests --filter=Cart --colors (executa todos os teste da classe cart)
+      - vendor\bin\phpunit tests --filter=CartTest::test_add_to_cart --colors
+      - vendor\bin\phpunit tests --filter=CartTest::test_add_to_cart_existing_item --colors
+      - vendor\bin\phpunit tests --filter=CartTest::testRemoveFromCart --colors
+      - vendor\bin\phpunit tests --filter=Ebook --colors (executa todos da classe ebook)
+      - vendor\bin\phpunit tests --filter=EbookTest::test_get_all_ebooks --colors
+      - vendor\bin\phpunit tests --filter=EbookTest::test_search_ebooks --colors
+      - vendor\bin\phpunit tests --filter=EbookTest::testGetEbookById --colors
+      - vendor\bin\phpunit tests --filter=User --colors (executa todos da classe User)
+      - vendor\bin\phpunit tests --filter=UserTest::test_get_user_id --colors
+      - vendor\bin\phpunit tests --filter=UserTest::test_creat --colors
+      - vendor\bin\phpunit tests --filter=UserTest::testFindByEmail --colors
 
 
-## Link para a release completa  : https://github.com/ViiniDev/E_Book_Wizard/pull/
+## Link para a release completa  : https://github.com/ViiniDev/E_Book_Wizard/pull/58
 
    ## Nesta release contém :
-      -Descrição : Nesta release contém ... em aberto
+      -Descrição : Nesta release contém aplicação dos testes unitarios no codigo
 
 ## Link para a Trello da equipe  :   
 https://trello.com/invite/b/KSIbSb3i/ATTI9fc4c17b040a0eca2a1831473f804cceF5B0E0A6/iteracoes-ebookwizard
@@ -124,10 +143,17 @@ https://trello.com/invite/b/KSIbSb3i/ATTI9fc4c17b040a0eca2a1831473f804cceF5B0E0A
 
 - https://youtu.be/jm36ifBuI1U - sem admin
 - https://youtu.be/ONAIDxYapOg - com admin
+- https://youtu.be/ABSeLDnmU1o - site completo
+- https://youtu.be/afwmnizgqMI - testes unitarios
 
 
 ## Instruções para Executar o Projeto
 Para executar o site, siga os passos abaixo:
-1. Antes de iniciar o codigo adicionar a database MySQL ebooks.sql, recomendo TablePlus porque é facil de usar e não trava, link explicando como adicionar database: https://tableplus.com/blog/2018/10/import-export-database.html.
-2. Para rodar o site so precisa ter o php instalado, abrir o terminal na pasta principal e usar o comando: php -S localhost:3000 -t public
+## Requisitos:
+   - php 8.2 ou mais
+   - mysql 8 ou mais
+
+   1. Antes de iniciar o codigo adicionar a database MySQL ebooks.sql, recomendo TablePlus porque é facil de usar e não trava, link explicando como adicionar database: https://tableplus.com/blog/2018/10/import-export-database.html.
+   2. Para rodar o site so precisa ter o php instalado, abrir o terminal na pasta principal e usar o comando: php -S localhost:3000 -t public
+
 
