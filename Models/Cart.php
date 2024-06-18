@@ -89,5 +89,5 @@ class Cart
         }
 
         return 0;
-    }
+    }    
 }

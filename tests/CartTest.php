@@ -110,4 +110,35 @@ class CartTest extends TestCase
         // Garantir que o método executa sem erros
         $this->assertTrue(true);
     }
+
+    public function testRemoveFromCart()
+    {
+        // Dados de teste
+        $userId = 1;
+        $ebookId = 101;
+
+        // Criar um mock para a classe Database
+        $mockDb = m::mock('Core\Database');
+
+        // Mock da query para remover item do carrinho
+        $mockDb->shouldReceive('query')
+            ->once()
+            ->with('DELETE FROM cart WHERE ebook_id = :ebook_id AND user_id = :user_id', [
+                'ebook_id' => $ebookId,
+                'user_id' => $userId
+            ])
+            ->andReturn(true);
+
+        // Instanciar a classe Cart com o mock Database
+        $cart = new Cart($mockDb);
+
+        // Testar o método removeFromCart
+        $cart->removeFromCart($userId, $ebookId);
+
+        // Garantir que o método executa sem erros
+        $this->assertTrue(true);        
+
+    }
+
+    
 }
