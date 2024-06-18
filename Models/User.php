@@ -14,6 +14,11 @@ class User
         $this->db = App::resolve(Database::class);
     }
 
+    public function setDatabase($db)
+    {
+        $this->db = $db;
+    }    
+
     public function findByEmail($email)
     {
         return $this->db->query('SELECT * FROM users WHERE email = :email', [
