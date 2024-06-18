@@ -9,9 +9,13 @@ class Cart
 {
     protected $db;
 
-    public function __construct()
+    public function __construct(Database $db = null)
     {
-        $this->db = App::resolve(Database::class);
+        if ($db) {
+            $this->db = $db;
+        } else {
+            $this->db = App::resolve(Database::class);
+        }
     }
 
     public function getUserCart($userId)
