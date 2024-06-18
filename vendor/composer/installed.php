@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'joaov/e_book_wizard',
-        'pretty_version' => 'dev-develop',
-        'version' => 'dev-develop',
-        'reference' => '8dca3f3c0fc11302e946b4f33701b7fa3cad9bad',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '02fb4b30194d7cb5542490bddd957270a90d564f',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -32,9 +32,9 @@
             'dev_requirement' => true,
         ),
         'joaov/e_book_wizard' => array(
-            'pretty_version' => 'dev-develop',
-            'version' => 'dev-develop',
-            'reference' => '8dca3f3c0fc11302e946b4f33701b7fa3cad9bad',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '02fb4b30194d7cb5542490bddd957270a90d564f',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
