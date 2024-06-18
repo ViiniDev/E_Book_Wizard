@@ -6,17 +6,11 @@
         }
     },
     "autoload-dev": {
-        "tests\\":"tests/"
+        "tests\\": "tests/"
     },
-    "authors": [
-        {
-            "name": "joao",
-            "email": "joaovictormelodonascimento@gmail.com"
-        }
-    ],
+    "authors": [],
     "require-dev": {
-        "phpunit/phpunit": "^11.2",
+        "phpunit/phpunit": "11",
         "mockery/mockery": "^1.6"
     }
-
 }
