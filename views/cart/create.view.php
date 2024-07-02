@@ -54,7 +54,11 @@
 
                     <div class="flex justify-end mt-6">
                         <a href="/ebooks" class="text-blue-500 hover:underline mr-4">Continuar Comprando</a>
-                        <a href="/payment" class="checkout-btn bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded-md">Finalizar Compra</a>
+                        <?php if (!empty($cart)) : ?>
+                            <a href="/payment" class="checkout-btn bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded-md">Finalizar Compra</a>
+                        <?php else : ?>
+                            <p class="text-red-500">Seu carrinho está vazio. Adicione itens antes de prosseguir para o pagamento.</p>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -63,5 +67,6 @@
 </main>
 
 
-<?php require base_path('views/partials/footer.php') ?>
 
+
+<?php require base_path('views/partials/footer.php') ?>

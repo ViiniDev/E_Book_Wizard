@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 
 <body class=" h-full" style="overflow: scroll">
