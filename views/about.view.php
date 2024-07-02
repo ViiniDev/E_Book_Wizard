@@ -17,6 +17,10 @@
             <p class="text-lg mt-4">
                 Conte conosco para encontrar os melhores ebooks e desfrutar de uma experiência de compra sem preocupações.
             </p>
+            <p class="text-lg mt-4">
+                Em caso de duvidas envie um email para o suporte:
+            <p class="font-semibold text-xl text-blue-500"><?= htmlspecialchars('contactEbookWizard@support.com') ?></p>
+            </p>
         </div>
     </div>
 </main>
