@@ -14,9 +14,14 @@ class Ebook
         $this->db = $db ?: App::resolve(Database::class);
     }
 
-    public function getAllEbooks()
+    public function getAllEbooksByTitle()
     {
         return $this->db->query('SELECT * FROM ebooks ORDER BY title ASC')->get();
+    }
+
+    public function getAllEbooksByLastAdded()
+    {
+        return $this->db->query('SELECT * FROM ebooks ORDER BY id DESC')->get();
     }
 
     public function searchEbooks($query)
@@ -29,5 +34,4 @@ class Ebook
     {
         return $this->db->query('SELECT * FROM ebooks WHERE id = :id', ['id' => $id])->find();
     }
-    
 }

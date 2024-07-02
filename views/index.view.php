@@ -1,106 +1,82 @@
-<?php require ('partials/head.php') ?>
-<?php require ('partials/nav.php') ?>
-<?php require ('partials/banner.php') ?>
+<?php require('partials/head.php') ?>
+<?php require('partials/nav.php') ?>
+<?php require('partials/banner.php') ?>
+
 
 <main>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-        <?php if (isset($_SESSION['user'])): ?>
-            <?php if ($_SESSION['user']['is_admin'] ?? false): ?>
-                <p>Olá administrador, <?= $_SESSION['user']['email'] ?>. Bem-vindo à página inicial.</p>
-            <?php else: ?>
-                <p>Olá, <?= $_SESSION['user']['email'] ?>. Bem-vindo à página inicial.</p>
-                <script>
-                    // Redireciona para a página de eBooks após 10 segundos
-                    setTimeout(function () {
-                        window.location.href = '/ebooks';
-                    }, 10000); // 10000 milissegundos = 10 segundos
-                </script>
-            <?php endif; ?>
-        <?php else: ?>
-            <p>Bem-vindo à página inicial. Por favor, faça login ou cadastre-se para acessar mais recursos.</p>
-            <script>
-                // Redireciona para a página de eBooks após 10 segundos
-                setTimeout(function () {
-                    window.location.href = '/ebooks';
-                }, 10000); // 10000 milissegundos = 10 segundos
-            </script>
-        <?php endif; ?>
-        <div class="mt-6">
-            <a href="/ebooks" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md">Ver eBooks</a>
-        </div>
-        <?php if (isset($_SESSION['user']) && $_SESSION['user']['is_admin'] ?? false): ?>
-            <div class="mt-6 flex">
-                <!-- Formulário para enviar o PDF do eBook -->
-                <div class="mr-6">
-                    <form action="/upload" method="post" enctype="multipart/form-data">
-                        <div class="mb-4">
-                            <label for="ebook_id_pdf" class="block text-sm font-medium text-gray-700">ID do Ebook:</label>
-                            <input type="number" id="ebook_id_pdf" name="ebook_id_pdf" min="1" value="1"
-                                class="quantity-input mr-2 text-sm border border-gray-300 rounded-md px-2 py-1">
-                        </div>
-                        <div class="mb-4">
-                            <label for="pdf_ebook" class="block text-sm font-medium text-gray-700">Selecione o PDF do
-                                eBook:</label>
-                            <input type="file" id="pdf_ebook" name="pdf_ebook" class="mt-1 block w-full">
-                        </div>
-                        <div>
-                            <input type="submit" value="Enviar eBook" name="submit"
-                                class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md">
-                        </div>
-                    </form>
-                </div>
-                <!-- Formulário para enviar a imagem do eBook -->
-                <div>
-                    <form action="/upload" method="post" enctype="multipart/form-data">
-                        <div class="mb-4">
-                            <label for="ebook_id_img" class="block text-sm font-medium text-gray-700">ID do Ebook:</label>
-                            <input type="number" id="ebook_id_img" name="ebook_id_img" min="1" value="1"
-                                class="quantity-input mr-2 text-sm border border-gray-300 rounded-md px-2 py-1">
-                        </div>
-                        <div class="mb-4">
-                            <label for="image" class="block text-sm font-medium text-gray-700">Selecione uma Imagem:</label>
-                            <input type="file" id="image" name="image" class="mt-1 block w-full">
-                        </div>
-                        <div>
-                            <input type="submit" value="Enviar Imagem" name="submit"
-                                class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md">
-                        </div>
-                    </form>
+
+        <div class="latest-releases-section space-y-12">
+            <div class="border-b border-gray-900/10 pb-12">
+                <h2 class="latest-releases-title text-3xl font-bold mb-6 text-center">Últimos Lançamentos</h2>
+                <div class="latest-releases-swiper-container swiper-container">
+                    <div class="latest-releases-swiper-wrapper swiper-wrapper">
+                        <?php foreach ($latest_releases as $ebook) : ?>
+                            <div class="latest-releases-swiper-slide swiper-slide">
+                                <li class="latest-releases-ebook-item border border-gray-300 rounded-lg shadow-md flex flex-col">
+                                    <div class="latest-releases-image-container overflow-hidden">
+                                        <?php
+                                        $ebook_id = $ebook['id'];
+                                        require base_path('Http/controllers/upload/display.php');
+                                        ?>
+                                    </div>
+                                    <div class="p-2 latest-releases-ebook-details flex-grow">
+                                        <h3 class="latest-releases-ebook-title text-md font-semibold mb-1">
+                                            <a href="/ebook?id=<?= $ebook['id'] ?>" class="latest-releases-ebook-link"><?= htmlspecialchars($ebook['title']) ?></a>
+                                        </h3>
+                                        <p class="latest-releases-ebook-price text-sm"><?= 'Preço: R$' . number_format($ebook['price'], 2) ?></p>
+                                    </div>
+                                    <div class="latest-releases-ebook-actions p-2">
+                                        <form method="POST" action="/cart" class="flex items-center">
+                                            <input type="hidden" name="ebook_id" value="<?= $ebook['id'] ?>">
+                                            <input type="hidden" name="ebook_title" value="<?= htmlspecialchars($ebook['title']) ?>">
+                                            <input type="hidden" name="ebook_price" value="<?= $ebook['price'] ?>">
+                                            <input type="number" name="quantity" value="1" min="1" class="latest-releases-quantity-input border border-gray-300 rounded-md px-2 py-1 mr-2 w-12">
+                                            <button type="submit" class="latest-releases-add-to-cart-btn bg-blue-500 text-white px-3 py-1 rounded">Adicionar</button>
+                                        </form>
+                                    </div>
+                                </li>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                    <!-- Adicionando setas de navegação -->
+                    <div class="latest-releases-swiper-button-next swiper-button-next"></div>
+                    <div class="latest-releases-swiper-button-prev swiper-button-prev"></div>
                 </div>
             </div>
-            <div class="mt-8">
-                <form action="/upload" method="POST" enctype="multipart/form-data">
-                    <div class="mb-4">
-                        <label for="title" class="block text-sm font-medium text-gray-700">Título:</label>
-                        <input type="text" id="title" name="title" class="form-input rounded-md shadow-sm mt-1 block w-full"
-                            required>
-                    </div>
-                    <div class="mb-4">
-                        <label for="author" class="block text-sm font-medium text-gray-700">Autor:</label>
-                        <input type="text" id="author" name="author"
-                            class="form-input rounded-md shadow-sm mt-1 block w-full" required>
-                    </div>
-                    <div class="mb-4">
-                        <label for="description" class="block text-sm font-medium text-gray-700">Descrição:</label>
-                        <textarea id="description" name="description"
-                            class="form-textarea mt-1 block w-full rounded-md shadow-sm" required></textarea>
-                    </div>
-                    <div class="mb-4">
-                        <label for="price" class="block text-sm font-medium text-gray-700">Preço:</label>
-                        <input type="number" id="price" name="price"
-                            class="form-input rounded-md shadow-sm mt-1 block w-full" required step="0.01">
-                    </div>
-                    <div class="mt-8">
-                        <form action="/upload" method="POST" enctype="multipart/form-data">
+        </div>
 
-                            <button type="submit"
-                                class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md">Adicionar
-                                eBook</button>
-                        </form>
-                    </div>
-
-                <?php endif; ?>
+        <div class="mt-6">
+            <a href="/ebooks" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md">Ver Todos os Ebooks</a>
         </div>
 </main>
 
-<?php require ('partials/footer.php') ?>
+<?php require('partials/footer.php') ?>
+
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+            },
+        },
+    });
+</script>

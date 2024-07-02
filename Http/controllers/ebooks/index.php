@@ -4,7 +4,7 @@ use Core\App;
 use Models\Ebook;
 
 $ebookModel = App::resolve(Ebook::class);
-$ebooks = $ebookModel->getAllEbooks();
+$ebooks = $ebookModel->getAllEbooksByTitle();
 
 view("ebooks/index.view.php", [
     'heading' => 'Ebooks',
