@@ -62,9 +62,24 @@ O objetivo da iteraçãa será refatorar o projeto para adição de testes unita
 
 
 
+## Link para a Release final do projeto 1.0.8: 
+https://github.com/ViiniDev/E_Book_Wizard/tree/release/1.0.8
+
+
+
+## Link para Landing Page do produto : 
+https://viinidev.github.io/E_Book_Wizard/landingpage/
+
+
+
+## Link para a o arquivo de apresentação final do projeto :  clique [aqui](./Apresentacao_final/apresentacao.pdf).
+
+
 
 ## Link para a Trello da equipe  :   
 https://trello.com/invite/b/KSIbSb3i/ATTI9fc4c17b040a0eca2a1831473f804cceF5B0E0A6/iteracoes-ebookwizard
+
+
 
 ## Link para video do site da equipe  :   
 
@@ -79,8 +94,10 @@ Para executar o site, siga os passos abaixo:
 ## Requisitos:
    - php 8.2 ou mais
    - mysql 8 ou mais
-
+   - base de dados: recomendo TablePlus
+   - Laragon ou outro, para rodar um servidor local mysql e php.
    1. Antes de iniciar o codigo adicionar a database MySQL ebooks.sql, recomendo TablePlus porque é facil de usar e não trava, link explicando como adicionar database: https://tableplus.com/blog/2018/10/import-export-database.html.
    2. Para rodar o site so precisa ter o php instalado, abrir o terminal na pasta principal e usar o comando: php -S localhost:3000 -t public
+   3. Digitar :localhost:3000 na url do seu navegador.
 
 
