@@ -3,8 +3,6 @@
 ---
 ## Ebook Wizard
 
-![alt text](logo.png)
-
 ---
 #### Curso: Bacharelado em Ciência da Computação
 #### Professor: Edeilson Milhomem da Silva
@@ -20,7 +18,6 @@ O projeto E-Book Wizard é uma plataforma de comércio eletrônico projetada par
 - **Fluxogramas do projeto**
 ## - **clique [aqui](./prototipos_de_tela/Prototipagem.pdf).**
 
----
 
 # Planejamento da Iteração #1 (03/04/2024 - 17/04/2024) - clique [aqui](./iteracoes/iteracao_1.md).
 
@@ -63,9 +60,7 @@ Site funcional após execução de teste unitarios com PHPUnit
 ## Objetivo da Iteração
 O objetivo da iteraçãa será refatorar o projeto para adição de testes unitarios permite a manutenção e a escalabilidade dos testes em conjunto com a aplicação.
 
----
 
-## Links :
 
 ## Link para a Release final do projeto 1.0.8: 
 https://github.com/ViiniDev/E_Book_Wizard/tree/release/1.0.8
@@ -73,11 +68,7 @@ https://github.com/ViiniDev/E_Book_Wizard/tree/release/1.0.8
 
 
 ## Link para Landing Page do produto : 
-https://viinidev.github.io/E_Book_Wizard/
-
-
-## Link para acesso ao network do projeto : 
-https://github.com/ViiniDev/E_Book_Wizard/network
+https://viinidev.github.io/E_Book_Wizard/landingpage/
 
 
 
@@ -96,7 +87,6 @@ https://trello.com/invite/b/KSIbSb3i/ATTI9fc4c17b040a0eca2a1831473f804cceF5B0E0A
 - https://youtu.be/ONAIDxYapOg - com admin
 - https://youtu.be/ABSeLDnmU1o - site completo
 - https://youtu.be/afwmnizgqMI - testes unitarios
-
 
 
 ## Instruções para Executar o Projeto
